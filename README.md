@@ -1,8 +1,16 @@
-# React + Vite
+# This is Pet Care website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live site Link: https://assignment11-dress-shop.web.app/
+Server site Code Link: https://github.com/tanvirAhmed73/Pet-care-server-site-code
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- This website is responsive website
+- this website both client side and serverside,serverside link in the top.
+- This website used reactjs,tailwind,expressjs,mongodb,strip
+- this website used google login and email password login and github login
+- this website used firebase authentication
+- this website used post pet details and delete data
+- this website used admin authorization
+- this website used jwt token
+- this website react router
+- this website used react icon
+- this website used table
