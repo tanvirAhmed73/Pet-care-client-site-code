@@ -37,6 +37,7 @@ import EditDonationPage from './AllComponent/Dashboard/Pages/MyDonationCampaign/
 import AdoptionRequest from './AllComponent/Dashboard/Pages/AdoptionRequest/AdoptionRequest.jsx';
 import MYDonation from './AllComponent/Dashboard/Pages/MyDonations/MYDonation.jsx';
 import ErrorPage from './ErrorPage/ErrorPage.jsx';
+import PrivateRoutes from './AllComponent/PrivateRoutes/PrivateRoutes.jsx';
 
 
 const router = createBrowserRouter([
@@ -84,7 +85,7 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/dashboard/AddAPet',
-        element:<AddAPet></AddAPet>
+        element:<PrivateRoutes><AddAPet></AddAPet></PrivateRoutes> 
       },
       // admin routes
       {
@@ -97,7 +98,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/dashboard/updateItem/:id',
-        element: <UpdatePetItem></UpdatePetItem>,
+        element: <PrivateRoutes><UpdatePetItem></UpdatePetItem></PrivateRoutes> ,
         loader:({params})=>fetch(`https://project-twelve-omega.vercel.app/petLIsting/${params.id}`)
       },
       {
@@ -111,28 +112,28 @@ const router = createBrowserRouter([
       },
       {
         path:'/dashboard/myAddedPet',
-        element:<MyAddedPets></MyAddedPets>,
+        element:<PrivateRoutes><MyAddedPets></MyAddedPets></PrivateRoutes> ,
       },
       {
         path:'/dashboard/createDonation',
-        element:<CreateDonationCampaign></CreateDonationCampaign>,
+        element: <PrivateRoutes> <CreateDonationCampaign></CreateDonationCampaign></PrivateRoutes>,
       },
       {
         path:'/dashboard/myDonationCampaigns',
-        element:<MyDonationCampaign></MyDonationCampaign>,
+        element:<PrivateRoutes> <MyDonationCampaign></MyDonationCampaign></PrivateRoutes>,
       },
       {
         path:'/dashboard/editDonationCampaigns/:id',
-        element:<EditDonationPage></EditDonationPage>,
+        element:<PrivateRoutes><EditDonationPage></EditDonationPage></PrivateRoutes> ,
         // loader:({params})=>fetch(`https://project-twelve-omega.vercel.app/donationCampaign/${params.id}`)
       },
       {
         path:'/dashboard/adoptionRequest',
-        element:<AdoptionRequest></AdoptionRequest>,
+        element:<PrivateRoutes> <AdoptionRequest></AdoptionRequest></PrivateRoutes>,
       },
       {
         path:'/dashboard/myDonation',
-        element:<MYDonation></MYDonation>,
+        element:<PrivateRoutes><MYDonation></MYDonation></PrivateRoutes> ,
       },
     ]
   }

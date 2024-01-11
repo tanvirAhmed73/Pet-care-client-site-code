@@ -4,9 +4,9 @@ import useAdmin from "../../Hooks/useAdmin";
 const Dashboard = () => {
     const [isadmin] = useAdmin();
     return (
-        <div className="flex justify-between">
+        <div className="flex justify-between ">
             {/* dashboard sidebar */}
-            <div className="w-[130px] lg:w-64 md:min-h-screen bg-gray-600">
+            <div className="w-[130px]  lg:w-64 md:min-h-screen bg-gray-600">
                 <ul className="menu p-4">
                     {
                     isadmin?
@@ -45,7 +45,7 @@ const Dashboard = () => {
 
             {/* dashboard content */}
             <div className="flex-1">
-                <Outlet></Outlet>
+                <Outlet></Outlet> 
             </div>
         </div>
     );

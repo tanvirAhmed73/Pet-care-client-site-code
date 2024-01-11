@@ -38,7 +38,7 @@ const AllPets = () => {
         <div >
             <div>
                 <div className="overflow-x-auto">
-                    <table className="table w-full">
+                    <table className="table table-xs table-pin-rows table-pin-cols w-full">
                         {/* head */}
                         <thead>
                             <tr>
@@ -70,7 +70,7 @@ const AllPets = () => {
                                     <td>
                                         {item.name}
                                     </td>
-                                    <td className="text-right">{item.age}</td>
+                                    <td className="">{item.age}</td>
                                     <td>
                                         <Link to={`/dashboard/updateItem/${item._id}`}>
                                             <button
