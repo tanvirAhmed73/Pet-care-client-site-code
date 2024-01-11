@@ -58,13 +58,13 @@ const router = createBrowserRouter([
         path: "/details/:id",
         element: <PetDetails></PetDetails>,
         loader: () =>
-          fetch("http://localhost:5000/petLIsting"),
+          fetch("https://project-twelve-omega.vercel.app/petLIsting"),
       },
       {
         path: "/donationDetails/:id",
         element: <DonationDetails></DonationDetails>,
         loader: () =>
-          fetch("http://localhost:5000/donationCampaign"),
+          fetch("https://project-twelve-omega.vercel.app/donationCampaign"),
       },
       {
         path: "/donation",
@@ -103,7 +103,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/petLIsting/${params.id}`
+            `https://project-twelve-omega.vercel.app/petLIsting/${params.id}`
           ),
       },
       {
@@ -111,7 +111,7 @@ const router = createBrowserRouter([
         element: <UpdateDonation></UpdateDonation>,
         loader: ({ params }) =>
           fetch(
-            `http://localhost:5000/donationCampaign/${params.id}`
+            `https://project-twelve-omega.vercel.app/donationCampaign/${params.id}`
           ),
       },
       {
@@ -151,7 +151,7 @@ const router = createBrowserRouter([
             <EditDonationPage></EditDonationPage>
           </PrivateRoutes>
         ),
-        // loader:({params})=>fetch(`http://localhost:5000/donationCampaign/${params.id}`)
+        // loader:({params})=>fetch(`https://project-twelve-omega.vercel.app/donationCampaign/${params.id}`)
       },
       {
         path: "/dashboard/adoptionRequest",

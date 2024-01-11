@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosOpen = axios.create({
-    baseURL: 'http://localhost:5000/'
+    baseURL: 'https://project-twelve-omega.vercel.app/'
 })
 const useAxiosOpen = () => {
     return axiosOpen;
