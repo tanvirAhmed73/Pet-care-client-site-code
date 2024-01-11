@@ -78,65 +78,65 @@ const router = createBrowserRouter([
       },
     ]
   },
-  {
-    path: '/dashboard',
-    element: <Dashboard></Dashboard>,
-    errorElement:<ErrorPage></ErrorPage>,
-    children:[
-      {
-        path:'/dashboard/AddAPet',
-        element:<PrivateRoutes><AddAPet></AddAPet></PrivateRoutes> 
-      },
-      // admin routes
-      {
-        path:'/dashboard/users',
-        element:<AllUsers></AllUsers>
-      },
-      {
-        path:'/dashboard/AllPets',
-        element:<AllPets></AllPets>
-      },
-      {
-        path:'/dashboard/updateItem/:id',
-        element: <PrivateRoutes><UpdatePetItem></UpdatePetItem></PrivateRoutes> ,
-        loader:({params})=>fetch(`https://project-twelve-omega.vercel.app/petLIsting/${params.id}`)
-      },
-      {
-        path:'/dashboard/updateDonation/:id',
-        element: <UpdateDonation></UpdateDonation>,
-        loader:({params})=>fetch(`https://project-twelve-omega.vercel.app/donationCampaign/${params.id}`)
-      },
-      {
-        path:'/dashboard/allDonation',
-        element:<AllDonation></AllDonation>
-      },
-      {
-        path:'/dashboard/myAddedPet',
-        element:<PrivateRoutes><MyAddedPets></MyAddedPets></PrivateRoutes> ,
-      },
-      {
-        path:'/dashboard/createDonation',
-        element: <PrivateRoutes> <CreateDonationCampaign></CreateDonationCampaign></PrivateRoutes>,
-      },
-      {
-        path:'/dashboard/myDonationCampaigns',
-        element:<PrivateRoutes> <MyDonationCampaign></MyDonationCampaign></PrivateRoutes>,
-      },
-      {
-        path:'/dashboard/editDonationCampaigns/:id',
-        element:<PrivateRoutes><EditDonationPage></EditDonationPage></PrivateRoutes> ,
-        // loader:({params})=>fetch(`https://project-twelve-omega.vercel.app/donationCampaign/${params.id}`)
-      },
-      {
-        path:'/dashboard/adoptionRequest',
-        element:<PrivateRoutes> <AdoptionRequest></AdoptionRequest></PrivateRoutes>,
-      },
-      {
-        path:'/dashboard/myDonation',
-        element:<PrivateRoutes><MYDonation></MYDonation></PrivateRoutes> ,
-      },
-    ]
-  }
+  // {
+  //   path: '/dashboard',
+  //   element: <Dashboard></Dashboard>,
+  //   errorElement:<ErrorPage></ErrorPage>,
+  //   children:[
+  //     {
+  //       path:'/dashboard/AddAPet',
+  //       element:<PrivateRoutes><AddAPet></AddAPet></PrivateRoutes> 
+  //     },
+  //     // admin routes
+  //     {
+  //       path:'/dashboard/users',
+  //       element:<AllUsers></AllUsers>
+  //     },
+  //     {
+  //       path:'/dashboard/AllPets',
+  //       element:<AllPets></AllPets>
+  //     },
+  //     {
+  //       path:'/dashboard/updateItem/:id',
+  //       element: <PrivateRoutes><UpdatePetItem></UpdatePetItem></PrivateRoutes> ,
+  //       loader:({params})=>fetch(`https://project-twelve-omega.vercel.app/petLIsting/${params.id}`)
+  //     },
+  //     {
+  //       path:'/dashboard/updateDonation/:id',
+  //       element: <UpdateDonation></UpdateDonation>,
+  //       loader:({params})=>fetch(`https://project-twelve-omega.vercel.app/donationCampaign/${params.id}`)
+  //     },
+  //     {
+  //       path:'/dashboard/allDonation',
+  //       element:<AllDonation></AllDonation>
+  //     },
+  //     {
+  //       path:'/dashboard/myAddedPet',
+  //       element:<PrivateRoutes><MyAddedPets></MyAddedPets></PrivateRoutes> ,
+  //     },
+  //     {
+  //       path:'/dashboard/createDonation',
+  //       element: <PrivateRoutes> <CreateDonationCampaign></CreateDonationCampaign></PrivateRoutes>,
+  //     },
+  //     {
+  //       path:'/dashboard/myDonationCampaigns',
+  //       element:<PrivateRoutes> <MyDonationCampaign></MyDonationCampaign></PrivateRoutes>,
+  //     },
+  //     {
+  //       path:'/dashboard/editDonationCampaigns/:id',
+  //       element:<PrivateRoutes><EditDonationPage></EditDonationPage></PrivateRoutes> ,
+  //       // loader:({params})=>fetch(`https://project-twelve-omega.vercel.app/donationCampaign/${params.id}`)
+  //     },
+  //     {
+  //       path:'/dashboard/adoptionRequest',
+  //       element:<PrivateRoutes> <AdoptionRequest></AdoptionRequest></PrivateRoutes>,
+  //     },
+  //     {
+  //       path:'/dashboard/myDonation',
+  //       element:<PrivateRoutes><MYDonation></MYDonation></PrivateRoutes> ,
+  //     },
+  //   ]
+  // }
 ]);
 
 
